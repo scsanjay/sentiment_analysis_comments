@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+<div class="w3-container w3-green">
+    <h2>Sentiment Analysis of Comments</h2>
+</div>
+<form class="w3-container" action="/predict" method="POST">    
+    <p>      
+        <label class="w3-text-green">Comment</label>
+        <textarea name="comment" class="w3-input w3-border" style="resize:none"></textarea>
+    </p>
+    <p><button type="submit" class="w3-btn w3-padding w3-green" style="width:120px">Check &nbsp; ❯</button></p>
+    <p class="w3-text-grey">Sentiment Analysis of Comments to filter out toxic comments. Given a comment the model will predict whether the comment is sincere or insincere.</p>
+</form>
+{% endblock %}
